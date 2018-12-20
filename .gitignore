@@ -1,2 +1,3 @@
 /apivenv/
 /.vscode/
+/.pytest_cache/
