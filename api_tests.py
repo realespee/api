@@ -28,3 +28,9 @@ class TestApi():
         resp = client.get(url)
         assert resp.json['status'] == 200
         assert resp.json['data'] == api.all_redflags
+
+    def test_get_specif_redflag(self, client):
+        url = '/api/v1/redflags/1'
+        resp = client.get(url)
+        assert resp.json['status'] == 200
+        assert resp.json['data'] == api.all_redflags[0]
